@@ -30,9 +30,8 @@ export default function Navbar() {
     return (
         <>
             <div
-                className={`w-full fixed top-0 z-40 md:h-20 h-16 flex justify-between md:items-end items-center md:ps-8 ps-4 md:pe-12 pe-4 ${
-                    isScrolled ? 'backdrop-blur-[4px] shadow-sm' : 'bg-transparent'
-                } transition-all duration-300 ease-in-out`}
+                className={`w-full fixed top-0 z-40 md:h-20 h-16 flex justify-between md:items-end items-center md:ps-8 ps-4 md:pe-12 pe-4 ${isScrolled ? 'backdrop-blur-[4px] shadow-sm' : 'bg-transparent'
+                    } transition-all duration-300 ease-in-out`}
             >
                 <div className="flex gap-10 items-center">
                     <img src="/assets/logo.png" alt="logo image" className="h-6 cursor-pointer" />

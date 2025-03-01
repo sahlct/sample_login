@@ -5,7 +5,7 @@ import Sidebar from "./sidebar";
 
 export default function Dashboard() {
     return (
-        <div className="w-full bg-[#D2D2D2] relative min-h-screen">
+        <div className=" w-full bg-[#D2D2D2] relative min-h-screen">
 
             {/* background blur colors  */}
             <div className="bgfirst absolute w-36 h-36 top-[20%] right-[10%] z-0 rounded-full blur-[60px]"></div>

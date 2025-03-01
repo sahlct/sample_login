@@ -1,9 +1,15 @@
 @import "tailwindcss";
+@theme {
+  --breakpoint-lgx: 1350px;
+  --breakpoint-lxx: 1500px;
+}
 *{
   box-sizing: border-box;
 }
 #root{
   padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
 }
 .bgfirst {
   background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 20%, rgba(115, 115, 115, 0) 100%);

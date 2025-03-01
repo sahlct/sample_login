@@ -10,7 +10,7 @@ const SidebarItem = ({ icon, isActive, onClick }) => {
   return (
     <div 
       className={cn(
-        "w-full h-10 flex justify-center items-center cursor-pointer rounded-full transition-all duration-300 transform hover:scale-110",
+        "w-full h-10 2xl:h-14 flex justify-center items-center cursor-pointer rounded-full transition-all duration-300 transform hover:scale-110",
         isActive ? "bg-[#C8E764]" : "bg-white hover:bg-[#c8e76487]"
       )}
       onClick={onClick}
@@ -45,7 +45,7 @@ export default function Sidebar() {
 
     return (
         <div className="w-[120px] fixed hidden left-0 z-20 h-screen pt-28 pb-10 md:flex items-center flex-col justify-between">
-            <div className="w-10 rounded-2xl h-fit flex flex-col gap-4 bg-[#FFFFFF9C] py-5 group">
+            <div className="w-10 2xl:w-14 rounded-2xl h-fit flex flex-col gap-4 bg-[#FFFFFF9C] py-5 group">
                 {menuItems.map((item, index) => (
                     <div 
                       key={index}
@@ -63,9 +63,9 @@ export default function Sidebar() {
                 ))}
             </div>
 
-            <div className="w-10 bg-[#FFFFFF9C] flex flex-col gap-5 rounded-3xl py-3">
+            <div className="w-10 2xl:w-14 bg-[#FFFFFF9C] flex flex-col gap-5 rounded-3xl ">
                 <div 
-                  className="w-full h-10 rounded-full flex justify-center items-center cursor-pointer bg-white hover:bg-gray-200 transition-all duration-300 transform hover:scale-110"
+                  className="w-full h-10 2xl:h-14 rounded-full flex justify-center items-center cursor-pointer bg-white hover:bg-gray-200 transition-all duration-300 transform hover:scale-110"
                   style={{
                     transition: "transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)"
                   }}
@@ -73,7 +73,7 @@ export default function Sidebar() {
                     <img src="/assets/logout.png" alt="logout_icon" className="h-4" />
                 </div>
                 <div 
-                  className="w-full h-10 rounded-full cursor-pointer transition-all duration-300 transform hover:scale-110"
+                  className="w-full h-10 2xl:h-14 rounded-full cursor-pointer transition-all duration-300 transform hover:scale-110"
                   style={{
                     transition: "transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)"
                   }}
