@@ -1,8 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const Offcanvas = ({ isOpen, toggleSidebar }) => {
-    const [activeIndex, setActiveIndex] = useState(0); 
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [animate, setAnimate] = useState(false); 
+
+    useEffect(() => {
+        if (isOpen) {
+            setTimeout(() => setAnimate(true), 100);
+        } else {
+            setAnimate(false);
+        }
+    }, [isOpen]);
 
     const menuItems = [
         { icon: "/assets/home.png", text: "Dashboard" },
@@ -14,7 +23,7 @@ const Offcanvas = ({ isOpen, toggleSidebar }) => {
         <div
             className={`fixed top-0 right-0 font-[Poppins] h-full w-64 bg-[#00000032] backdrop-blur-[5px] text-white transform ${
                 isOpen ? "translate-x-0" : "translate-x-full"
-            } transition-transform duration-300 ease-in-out z-40 flex flex-col justify-between`}
+            } transition-transform duration-500 ease-in-out z-40 flex flex-col justify-between`}
         >
             <div className="p-4">
                 {/* Header */}
@@ -44,8 +53,11 @@ const Offcanvas = ({ isOpen, toggleSidebar }) => {
                     {menuItems.map((item, index) => (
                         <div
                             key={index}
-                            className="p-2 flex items-center gap-3 cursor-pointer transition-all duration-300"
-                            onClick={() => setActiveIndex(index)} 
+                            className={`p-2 flex items-center gap-3 cursor-pointer transition-all duration-300 transform ${
+                                animate ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
+                            }`}
+                            style={{ transitionDelay: `${index * 100}ms` }} // Stagger effect
+                            onClick={() => setActiveIndex(index)}
                         >
                             <div
                                 className={`w-10 h-10 rounded-full flex justify-center items-center transition-all duration-300 ${
