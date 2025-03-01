@@ -5,3 +5,22 @@
 #root{
   padding: 0 !important;
 }
+.bgfirst {
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 20%, rgba(115, 115, 115, 0) 100%);
+}
+.bgsecond {
+  background: radial-gradient(circle, rgba(58, 255, 37, 0.19) 19%, rgba(115, 115, 115, 0) 100%);
+}
+.bgthird {
+  background: radial-gradient(circle, rgba(252, 213, 63, 0.58) 58%, rgba(115, 115, 115, 0) 100%);
+}
+.bgfourth {
+  background: radial-gradient(circle, rgba(77, 4, 109, 0.35) 35%, rgba(115, 115, 115, 0) 100%);
+}
+.bgfifth {
+  background: radial-gradient(circle, rgba(69, 37, 255, 0.19) 19%, rgba(115, 115, 115, 0) 100%);
+}
+.bgsixth {
+  background: radial-gradient(circle, rgba(200, 231, 100, 1) 58%, rgba(115, 115, 115, 0) 100%);
+}
+
